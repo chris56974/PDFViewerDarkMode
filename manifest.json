@@ -25,12 +25,9 @@
     }
   ],
   "permissions": [
-    "activeTab",
-    "storage",
-    "scripting",
-    "tabs"
+    "activeTab"
   ],
   "host_permissions": [
-    "<all_urls>"
+    "file://*.pdf"
   ]
 }
