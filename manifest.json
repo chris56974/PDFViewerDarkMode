@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "DarkPDF",
+  "name": "PDF Dark Theme",
   "version": "1.00",
-  "description": "Dark mode for PDF",
+  "description": "Applies a dark theme to your PDF viewer",
   "action": {
     "default_icon": {
       "16": "images/dark16.png",
