@@ -1,4 +1,4 @@
-# PDF Viewer - Dark Mode 
+# PDF Dark Theme
 
 This google chrome extension is basically the same as [DarkPDF](https://chrome.google.com/webstore/detail/darkpdf/cfemcmeknmapecneeeaajnbhhgfgkfhp?hl=en) with a few exceptions...
 
