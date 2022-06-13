@@ -4,8 +4,8 @@ This google chrome extension is basically the same as [DarkPDF](https://chrome.g
 
 1. It's always enabled 
 2. It's only one file
-3. It doesn't use any background/serviceWorker, chromeAPI, event stuff
-4. It only requires activeTab and file:// permissions 
+3. It doesn't need any background/serviceWorker, chromeAPI, event stuff
+4. It only requires file:// permissions 
 
 ## What I've Learned
 

@@ -24,9 +24,6 @@
       "js": ["content-script.js"]
     }
   ],
-  "permissions": [
-    "activeTab"
-  ],
   "host_permissions": [
     "file://*.pdf"
   ]
