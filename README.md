@@ -10,31 +10,34 @@ A fork of [DarkPDF](https://chrome.google.com/webstore/detail/darkpdf/cfemcmeknm
 
 It creates a white colored div that covers the entire viewport and then uses CSS to give the div a "mix-blend-mode: difference;".
 
-## Why I made this extension
+### Why I made this extension
 
-I originally made it because I liked Arsh's DarkPDF extension (see above), but I didn't like how it inverted the colors for the PDF viewer as well. You can see this in the [DarkPDF demo video](https://youtu.be/Z7oZTJ41cxg?t=5), where the PDF viewer surrounding the PDF document is quite bright and harsh on the eyes imo. I later rediscovered that the [PDF Viewer for Vimium C](https://chrome.google.com/webstore/detail/pdf-viewer-for-vimium-c/nacjakoppgmdcpemlfnfegmlhipddanj?hl=en) has a light theme that I never used (for obvious reasons). And I could've just used that and have the DarkPDF extension invert the colors back into dark theme (fixing the whole issue). But I decided to fork the extension anyways once I saw that it was using an older version of the chrome extension manifest and how it requested permissions for browser history and stuff. 
+I originally made it because I liked Arsh's DarkPDF extension (see above), but I didn't like how it inverted the colors for the PDF viewer as well. You can see this in the [DarkPDF demo video](https://youtu.be/Z7oZTJ41cxg?t=5), where the PDF viewer surrounding the PDF document is quite bright and harsh on the eyes imo. I thought maybe I could limit the dark theme to just the pages of the PDF document. That way both my pdf viewer and my pdf documents could be dark.
 
-Update: Arsh has recently upgraded the DarkPDF extension to the latest version of the chrome extension manifest and I think I prefer his extension over mine. Mine is annoying whenever you have to open PDFs on the internet because it's basically a flashbang until you download the pdf. 
+I later found out that I could've just used the light theme that came with my [PDF Viewer (for Vimium C)](https://chrome.google.com/webstore/detail/pdf-viewer-for-vimium-c/nacjakoppgmdcpemlfnfegmlhipddanj?hl=en). And then DarkPDF would invert the colors in the PDF viewer back into dark theme (fixing the whole issue). But I decided to fork the DarkPDF extension anyways once I saw that it was using an older version of the chrome extension manifest and how it requested permissions for the user's browser history.
 
-## How I went about creating this extension
+Update: Arsh has recently upgraded the DarkPDF extension to the latest version of the chrome extension manifest and I prefer his extension over mine now. Mine is annoying whenever you have to open PDFs on the internet because it's basically a flashbang until you download the pdf. So it is worth the extra permissions.
 
-The [PDF viewer for Vimium C](https://chrome.google.com/webstore/detail/pdf-viewer-for-vimium-c/nacjakoppgmdcpemlfnfegmlhipddanj?hl=en) creates HTML elements on top of the PDF document, and I thought I could maybe manipulate them to my liking. And if I couldn't, I thought maybe I could just find out where the "page" element was, so I can append a div to it with the same width and height. Unfortunately, this didn't work because it turned out the generated HTML was actually placed in a shadow DOM. I tried things like document.querySelect('.shadowElement'), DOMContentLoaded and MutationObserver to no avail. 
+### How I went about creating this extension
 
-I then realized I could just use a light theme pdf viewer instead and keep the div at the viewport size. So I stripped the extension down to a very minimal version and left it at that.
+I thought I could manipulate the HTML elements that came with the [PDF viewer for Vimium C](https://chrome.google.com/webstore/detail/pdf-viewer-for-vimium-c/nacjakoppgmdcpemlfnfegmlhipddanj?hl=en), or at least find out where the "page" element was so I can append a new div element to it with the same height and width. Unfortunately, this didn't work because the generated HTML is actually placed in a shadow DOM. I tried things like document.querySelect('.shadowElement'), DOMContentLoaded and MutationObserver to no avail.
 
-## What I learned 
+It was at this point that I then realized I could just use a light theme pdf viewer and do the same thing as before. I stripped the extension down to a very minimal version and left it at that.
 
-I learned how to use different chrome APIs (storage, tabs, scripting) and different extension related stuff (permissions, popup menu things, events).
+### What I learned 
 
-How mix-blend mode interacts with a white pdf document
+I learned how to use different chrome APIs (storage, tabs, scripting) and different extension related stuff (permissions, popup menu stuff, events).
 
-## What would be cool to learn
+How mix-blend-mode works on a rudimentary level
 
-It'd be cool to look at PDF.js to see how it works and see if it has any interoperability with other chrome extensions and stuff.
+### Further learning
 
-It'd be cool to look at the spec for mix-blend-mode, because [Ana Tudor's article](https://css-tricks.com/taming-blend-modes-difference-and-exclusion) is an eye opener and definitely worth looking at if I use mix-blend-mode again in the future.
+It'd be cool to dive deeper into PDF.js
 
-### Development Notes
+It'd be cool to look at the spec for mix-blend-mode. 
+  - [Ana Tudor's article](https://css-tricks.com/taming-blend-modes-difference-and-exclusion) also looks good.
+
+#### Development Notes
 
 - https://stackoverflow.com/questions/43233115/
 
@@ -45,6 +48,6 @@ chrome.action.onClicked.addListener(() => {})    // refers to the extension bein
 chrome.runtime.onInstalled.addListener(() => {}) 
 ```
 
-## Attribution
+#### Attribution
 
 Big thanks to [Arshpreet Buttar](https://github.com/ArshSB) for his [DarkPDF Extension (Github Link)](https://github.com/ArshSB/DarkPDF). My eyes are saved.
