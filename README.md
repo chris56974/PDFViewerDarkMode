@@ -1,6 +1,6 @@
 # PDF Dark Theme
 
-This google chrome extension is a fork of [DarkPDF](https://chrome.google.com/webstore/detail/darkpdf/cfemcmeknmapecneeeaajnbhhgfgkfhp?hl=en) with a few exceptions...
+A fork of [DarkPDF](https://chrome.google.com/webstore/detail/darkpdf/cfemcmeknmapecneeeaajnbhhgfgkfhp?hl=en) with a few exceptions...
 
 1. It's always enabled 
 2. It's less complicated (no background/serviceWorker, or chromeAPI stuff)
