@@ -6,7 +6,7 @@ A fork of [DarkPDF](https://chrome.google.com/webstore/detail/darkpdf/cfemcmeknm
 2. It's less complicated (no background/serviceWorker, or chromeAPI stuff)
 4. It only requires file:// permissions 
 
-## How it works 
+### How it works 
 
 It creates a white colored div that covers the entire viewport and then uses CSS to give the div a "mix-blend-mode: difference;".
 
