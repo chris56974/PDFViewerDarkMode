@@ -2,7 +2,7 @@ let darkPdfDivStyles = `
   pointer-events: none;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(230,230,230);
+  background-color: #bfbfbf;
   mix-blend-mode: difference;
   z-index: 1; 
 `;
