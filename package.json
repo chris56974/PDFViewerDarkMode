@@ -1,0 +1,20 @@
+{
+  "name": "darkpdf",
+  "version": "1.0.1",
+  "description": "A fork of [DarkPDF](https://chrome.google.com/webstore/detail/darkpdf/cfemcmeknmapecneeeaajnbhhgfgkfhp?hl=en) with a few exceptions...",
+  "main": "content-script.js",
+  "scripts": {
+    "zip": "./scripts/zip.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chris56974/PDFViewerDarkMode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chris56974/PDFViewerDarkMode/issues"
+  },
+  "homepage": "https://github.com/chris56974/PDFViewerDarkMode#readme"
+}
