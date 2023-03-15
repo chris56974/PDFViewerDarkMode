@@ -2,19 +2,19 @@
   "manifest_version": 3,
   "name": "PDF Dark Theme",
   "description": "Applies a dark theme to your PDF viewer",
-  "version": "1.02",
+  "version": "1.03",
   "icons": {
-    "16": "images/dark16.png",
-    "32": "images/dark32.png",
-    "48": "images/dark48.png",
-    "128": "images/dark128.png"
+    "16": "imgs/dark16.png",
+    "32": "imgs/dark32.png",
+    "48": "imgs/dark48.png",
+    "128": "imgs/dark128.png"
   },
   "action": {
     "default_icon": {
-      "16": "images/dark16.png",
-      "32": "images/dark32.png",
-      "48": "images/dark48.png",
-      "128": "images/dark128.png"
+      "16": "imgs/dark16.png",
+      "32": "imgs/dark32.png",
+      "48": "imgs/dark48.png",
+      "128": "imgs/dark128.png"
     }
   },
   "content_scripts": [

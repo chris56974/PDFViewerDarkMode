@@ -25,3 +25,5 @@ chrome.runtime.onInstalled.addListener(() => {})
 ## Attribution
 
 - Big thanks to [Arshpreet Buttar](https://github.com/ArshSB) for his [DarkPDF Extension (Github Link)](https://github.com/ArshSB/DarkPDF).
+
+- [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole)
