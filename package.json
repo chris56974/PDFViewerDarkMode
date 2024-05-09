@@ -1,6 +1,6 @@
 {
   "name": "darkpdf",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "A fork of [DarkPDF](https://chrome.google.com/webstore/detail/darkpdf/cfemcmeknmapecneeeaajnbhhgfgkfhp?hl=en) with a few exceptions...",
   "main": "content-script.js",
   "scripts": {
